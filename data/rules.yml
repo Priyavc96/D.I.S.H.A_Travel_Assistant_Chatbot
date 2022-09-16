@@ -1,0 +1,29 @@
+version: "3.1"
+
+rules:
+
+- rule: Say Hello anytime the user says hi
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Display city names when user says plan my trip
+  steps:
+  - intent: plan_cities
+  - action: utter_plan_cities
+
+- rule: Ask city name anytime user wants to book hotel
+  steps:
+  - intent: book_hotels
+  - action: utter_book_hotels
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+  - action: utter_goodbye_two
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot

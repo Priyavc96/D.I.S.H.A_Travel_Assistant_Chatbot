@@ -1,0 +1,177 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: goto_aurangabad
+  - action: utter_goto_aurangabad
+  
+- story: happy path 2
+  steps:
+  - intent: goto_nashik
+  - action: utter_goto_nashik
+
+- story: happy path 3
+  steps:
+  - intent: goto_pune
+  - action: utter_goto_pune
+
+- story: happy path 4
+  steps:
+  - intent: goto_mumbai
+  - action: utter_goto_mumbai
+
+- story: happy path 5
+  steps:
+  - intent: goto_ratnagiri
+  - action: utter_goto_ratnagiri
+
+- story: happy path 6
+  steps:
+  - intent: goto_nagpur
+  - action: utter_goto_nagpur
+
+- story: happy path 7
+  steps:
+  - intent: goto_amravati
+  - action: utter_goto_amravati
+
+- story: happy path 8
+  steps:
+  - intent: goto_sindhudurg
+  - action: utter_goto_sindhudurg
+
+- story: happy path 9
+  steps:
+  - intent: goto_raigad
+  - action: utter_goto_raigad
+
+- story: happy path 10
+  steps:
+  - intent: goto_kolhapur
+  - action: utter_goto_kolhapur
+
+- story: hotel booking path
+  steps:
+  - intent: book_aurangabad
+  - action: utter_book_aurangabad
+  - action: utter_book_aurangabad_two
+  - action: utter_book_aurangabad_three
+  - action: utter_book_aurangabad_four
+  - action: utter_book_aurangabad_five
+
+- story: hotel booking path 2
+  steps:
+  - intent: book_nashik
+  - action: utter_book_nashik
+  - action: utter_book_nashik_two
+  - action: utter_book_nashik_three
+  - action: utter_book_nashik_four
+  - action: utter_book_nashik_five
+
+- story: hotel booking path 3
+  steps:
+  - intent: book_pune
+  - action: utter_book_pune
+  - action: utter_book_pune_two
+  - action: utter_book_pune_three
+  - action: utter_book_pune_four
+  - action: utter_book_pune_five
+
+- story: hotel booking path 4
+  steps:
+  - intent: book_mumbai
+  - action: utter_book_mumbai
+  - action: utter_book_mumbai_two
+  - action: utter_book_mumbai_three
+  - action: utter_book_mumbai_four
+  - action: utter_book_mumbai_five
+
+- story: hotel booking path 5
+  steps:
+  - intent: book_ratnagiri
+  - action: utter_book_ratnagiri
+  - action: utter_book_ratnagiri_two
+  - action: utter_book_ratnagiri_three
+  - action: utter_book_ratnagiri_four
+  - action: utter_book_ratnagiri_five
+
+- story: hotel booking path 6
+  steps:
+  - intent: book_nagpur
+  - action: utter_book_nagpur
+  - action: utter_book_nagpur_two
+  - action: utter_book_nagpur_three
+  - action: utter_book_nagpur_four
+  - action: utter_book_nagpur_five
+
+- story: hotel booking path 7
+  steps:
+  - intent: book_amravati
+  - action: utter_book_amravati
+  - action: utter_book_amravati_two
+  - action: utter_book_amravati_three
+  - action: utter_book_amravati_four
+  - action: utter_book_amravati_five
+
+- story: hotel booking path 8
+  steps:
+  - intent: book_sindhudurg
+  - action: utter_book_sindhudurg
+  - action: utter_book_sindhudurg_two
+  - action: utter_book_sindhudurg_three
+  - action: utter_book_sindhudurg_four
+  - action: utter_book_sindhudurg_five
+
+- story: hotel booking path 9
+  steps:
+  - intent: book_raigad
+  - action: utter_book_raigad
+  - action: utter_book_raigad_two
+  - action: utter_book_raigad_three
+  - action: utter_book_raigad_four
+  - action: utter_book_raigad_five
+
+- story: hotel booking path 10
+  steps:
+  - intent: book_kolhapur
+  - action: utter_book_kolhapur
+  - action: utter_book_kolhapur_two
+  - action: utter_book_kolhapur_three
+  - action: utter_book_kolhapur_four
+  - action: utter_book_kolhapur_five
+
+  
+
+- story: sad path 1
+  steps:  
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+
+- story: ticket booking path
+  steps:
+  - intent: book_tickets
+  - action: utter_book_tickets
+
+- story: thanks path
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+  
+# - story: weather path
+#   steps:
+#   - intent: city_weather
+#   - action: action_weather

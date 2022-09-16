@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Rasa Core Visualisation</title>
+    <script src="https://dagrejs.github.io/project/dagre-d3/latest/dagre-d3.min.js"></script>
+    <script src="https://dagrejs.github.io/project/dagre/latest/dagre.min.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://dagrejs.github.io/project/graphlib-dot/v0.6.3/graphlib-dot.js"></script>
+</head>
+<body>
+<div id="errormsg" style="color: #b00"></div>
+<svg>
+    <style id="graph-style">
+        .node.invisible > rect {
+            display: none;
+        }
+
+        .node.start > rect {
+            fill: #7f7;
+            rx: 30;
+            ry: 18;
+        }
+
+        .node.end > rect {
+            fill: #f77;
+            rx: 30;
+            ry: 18;
+        }
+
+        .node:not(.active) > rect, .node:not(.active) > .label {
+            opacity: 0.4;
+        }
+
+        .edgePath:not(.active) path {
+            opacity: 0.4;
+        }
+
+        .node.ellipsis > rect {
+            fill: #CCC;
+        }
+
+        .node.intent > rect {
+            fill: #7ff;
+        }
+
+        .node.dashed > rect {
+            stroke-dasharray: 5;
+        }
+
+        text {
+            font-weight: 300;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serf, serif;
+            font-size: 14px;
+            color: #1f1d1d;
+        }
+
+        .node rect {
+            stroke: #444;
+            fill: #fff;
+            stroke-width: 1.5px;
+        }
+
+        .edgePath path {
+            stroke: #333;
+            stroke-width: 1.5px;
+        }
+
+        svg {
+            position: fixed;
+            top: 10px;
+            left: 0;
+            height: 100%;
+            width: 100%
+        }
+    </style>
+    <g></g>
+</svg>
+<script>
+
+  function serveGraph() {
+    let oldInputGraphValue;
+
+    const url = 'visualization.dot';
+    const refreshInterval = 500;
+
+    // trigger a refresh by fetching an updated graph
+    setInterval(function () {
+      fetch(url).then(r => r.text()).then(dot => {
+        document.getElementById('errormsg').innerHTML = '';
+        if (oldInputGraphValue === dot) return;
+
+        oldInputGraphValue = dot;
+        drawGraph(dot);
+      }).catch(err => {
+        document.getElementById('errormsg').innerHTML =
+          'Failed to update plot. (' + err.message + ')';
+      });
+    }, refreshInterval);
+  }
+
+  function drawGraph(graph) {
+    let g = graphlibDot.read(graph);
+    // Set margins, if not present
+    if (!g.graph().hasOwnProperty("marginx") &&
+      !g.graph().hasOwnProperty("marginy")) {
+      g.graph().marginx = 20;
+      g.graph().marginy = 20;
+    }
+    g.graph().transition = function (selection) {
+      return selection.transition().duration(300);
+    };
+    // Render the graph into svg g
+    d3.select("svg g").call(render, g);
+  }
+  // Set up zoom support
+  const svg = d3.select("svg"),
+    inner = d3.select("svg g"),
+    zoom = d3.zoom().on("zoom", function () {
+      inner.attr("transform", d3.event.transform);
+    });
+  svg.call(zoom);
+
+  // Create and configure the renderer
+  const render = dagreD3.render();
+
+  let isClient = false;
+  isClient = true;
+
+  if (isClient) {
+    // Mark all nodes and their edges as active
+    cssRules = document.getElementById('graph-style').sheet.cssRules;
+    cssRules[3].style.opacity = 1;
+    cssRules[4].style.opacity = 1;
+
+    let graph;
+    graph = `digraph  {
+0 [class="start active", fillcolor=green, fontsize=12, label=START, style=filled];
+"-1" [class=end, fillcolor=red, fontsize=12, label=END, style=filled];
+1 [class="", fontsize=12, label=utter_goto_ratnagiri];
+2 [class="", fontsize=12, label=utter_goto_nagpur];
+3 [class="", fontsize=12, label=utter_goto_amravati];
+4 [class="", fontsize=12, label=utter_goto_sindhudurg];
+5 [class="", fontsize=12, label=utter_goto_raigad];
+6 [class="", fontsize=12, label=utter_goto_kolhapur];
+7 [class="", fontsize=12, label=utter_book_aurangabad];
+8 [class="", fontsize=12, label=utter_book_aurangabad_two];
+9 [class="", fontsize=12, label=utter_book_aurangabad_three];
+10 [class="", fontsize=12, label=utter_book_aurangabad_four];
+11 [class="", fontsize=12, label=utter_book_aurangabad_five];
+12 [class="", fontsize=12, label=utter_book_nashik];
+13 [class="", fontsize=12, label=utter_book_nashik_two];
+14 [class="", fontsize=12, label=utter_book_nashik_three];
+15 [class="", fontsize=12, label=utter_book_nashik_four];
+16 [class="", fontsize=12, label=utter_book_nashik_five];
+17 [class="", fontsize=12, label=utter_book_pune];
+18 [class="", fontsize=12, label=utter_book_pune_two];
+19 [class="", fontsize=12, label=utter_book_pune_three];
+20 [class="", fontsize=12, label=utter_book_pune_four];
+21 [class="", fontsize=12, label=utter_book_pune_five];
+22 [class="", fontsize=12, label=utter_book_mumbai];
+23 [class="", fontsize=12, label=utter_book_mumbai_two];
+24 [class="", fontsize=12, label=utter_book_mumbai_three];
+25 [class="", fontsize=12, label=utter_book_mumbai_four];
+26 [class="", fontsize=12, label=utter_book_mumbai_five];
+27 [class="", fontsize=12, label=utter_book_ratnagiri];
+28 [class="", fontsize=12, label=utter_book_ratnagiri_two];
+29 [class="", fontsize=12, label=utter_book_ratnagiri_three];
+30 [class="", fontsize=12, label=utter_book_ratnagiri_four];
+31 [class="", fontsize=12, label=utter_book_ratnagiri_five];
+32 [class="", fontsize=12, label=utter_book_nagpur];
+33 [class="", fontsize=12, label=utter_book_nagpur_two];
+34 [class="", fontsize=12, label=utter_book_nagpur_three];
+35 [class="", fontsize=12, label=utter_book_nagpur_four];
+36 [class="", fontsize=12, label=utter_book_nagpur_five];
+37 [class="", fontsize=12, label=utter_book_amravati];
+38 [class="", fontsize=12, label=utter_book_amravati_two];
+39 [class="", fontsize=12, label=utter_book_amravati_three];
+40 [class="", fontsize=12, label=utter_book_amravati_four];
+41 [class="", fontsize=12, label=utter_book_amravati_five];
+42 [class="", fontsize=12, label=utter_book_sindhudurg];
+43 [class="", fontsize=12, label=utter_book_sindhudurg_two];
+44 [class="", fontsize=12, label=utter_book_sindhudurg_three];
+45 [class="", fontsize=12, label=utter_book_sindhudurg_four];
+46 [class="", fontsize=12, label=utter_book_sindhudurg_five];
+47 [class="", fontsize=12, label=utter_book_raigad];
+48 [class="", fontsize=12, label=utter_book_raigad_two];
+49 [class="", fontsize=12, label=utter_book_raigad_three];
+50 [class="", fontsize=12, label=utter_book_raigad_four];
+51 [class="", fontsize=12, label=utter_book_raigad_five];
+52 [class="", fontsize=12, label=utter_book_kolhapur];
+53 [class="", fontsize=12, label=utter_book_kolhapur_two];
+54 [class="", fontsize=12, label=utter_book_kolhapur_three];
+55 [class="", fontsize=12, label=utter_book_kolhapur_four];
+56 [class="", fontsize=12, label=utter_book_kolhapur_five];
+57 [class="", fontsize=12, label=utter_goto_aurangabad];
+58 [class="", fontsize=12, label=utter_goto_nashik];
+59 [class="", fontsize=12, label=utter_goto_pune];
+60 [class="", fontsize=12, label=utter_goto_mumbai];
+61 [class="", fontsize=12, label="..."];
+62 [class="", fontsize=12, label=utter_greet];
+64 [class="", fontsize=12, label=utter_plan_cities];
+66 [class="", fontsize=12, label=utter_book_hotels];
+68 [class="", fontsize=12, label=utter_goodbye];
+70 [class="", fontsize=12, label=utter_iamabot];
+71 [class=intent, fillcolor=lightblue, label=Ratnagiri, shape=rect, style=filled];
+72 [class=intent, fillcolor=lightblue, label=nagpur, shape=rect, style=filled];
+73 [class=intent, fillcolor=lightblue, label=amravati, shape=rect, style=filled];
+74 [class=intent, fillcolor=lightblue, label=Sindhudurg, shape=rect, style=filled];
+75 [class=intent, fillcolor=lightblue, label=Raigad, shape=rect, style=filled];
+76 [class=intent, fillcolor=lightblue, label=Kolhapur, shape=rect, style=filled];
+77 [class=intent, fillcolor=lightblue, label="Hotels in Aurangabad", shape=rect, style=filled];
+78 [class=intent, fillcolor=lightblue, label="Book hotels in Nashik", shape=rect, style=filled];
+79 [class=intent, fillcolor=lightblue, label="Find hotels in Pune", shape=rect, style=filled];
+80 [class=intent, fillcolor=lightblue, label="Find hotels in Mumbai", shape=rect, style=filled];
+81 [class=intent, fillcolor=lightblue, label="Hotels in Ratnagiri", shape=rect, style=filled];
+82 [class=intent, fillcolor=lightblue, label="Book hotels in Nagpur", shape=rect, style=filled];
+83 [class=intent, fillcolor=lightblue, label="Show hotels in Amravati", shape=rect, style=filled];
+84 [class=intent, fillcolor=lightblue, label="Find hotels in Sindhudurg", shape=rect, style=filled];
+85 [class=intent, fillcolor=lightblue, label="Book hotels in Raigad", shape=rect, style=filled];
+86 [class=intent, fillcolor=lightblue, label="Show hotels in Kolhapur", shape=rect, style=filled];
+87 [class=intent, fillcolor=lightblue, label=Aurangabad, shape=rect, style=filled];
+88 [class=intent, fillcolor=lightblue, label=nashik, shape=rect, style=filled];
+89 [class=intent, fillcolor=lightblue, label=Pune, shape=rect, style=filled];
+90 [class=intent, fillcolor=lightblue, label=Mumbai, shape=rect, style=filled];
+91 [class=intent, fillcolor=lightblue, label=goodevening, shape=rect, style=filled];
+92 [class=intent, fillcolor=lightblue, label="I need assistance for travel", shape=rect, style=filled];
+93 [class=intent, fillcolor=lightblue, label=hotels, shape=rect, style=filled];
+94 [class=intent, fillcolor=lightblue, label="good by", shape=rect, style=filled];
+95 [class=intent, fillcolor=lightblue, label="am I talking to a human?", shape=rect, style=filled];
+0 -> 61  [class="", key=NONE, label=""];
+0 -> 71  [class="", key=0];
+0 -> 72  [class="", key=0];
+0 -> 73  [class="", key=0];
+0 -> 74  [class="", key=0];
+0 -> 75  [class="", key=0];
+0 -> 76  [class="", key=0];
+0 -> 77  [class="", key=0];
+0 -> 78  [class="", key=0];
+0 -> 79  [class="", key=0];
+0 -> 80  [class="", key=0];
+0 -> 81  [class="", key=0];
+0 -> 82  [class="", key=0];
+0 -> 83  [class="", key=0];
+0 -> 84  [class="", key=0];
+0 -> 85  [class="", key=0];
+0 -> 86  [class="", key=0];
+0 -> 87  [class="", key=0];
+0 -> 88  [class="", key=0];
+0 -> 89  [class="", key=0];
+0 -> 90  [class="", key=0];
+1 -> "-1"  [class="", key=NONE, label=""];
+2 -> "-1"  [class="", key=NONE, label=""];
+3 -> "-1"  [class="", key=NONE, label=""];
+4 -> "-1"  [class="", key=NONE, label=""];
+5 -> "-1"  [class="", key=NONE, label=""];
+6 -> "-1"  [class="", key=NONE, label=""];
+7 -> 8  [class="", key=NONE, label=""];
+8 -> 9  [class="", key=NONE, label=""];
+9 -> 10  [class="", key=NONE, label=""];
+10 -> 11  [class="", key=NONE, label=""];
+11 -> "-1"  [class="", key=NONE, label=""];
+12 -> 13  [class="", key=NONE, label=""];
+13 -> 14  [class="", key=NONE, label=""];
+14 -> 15  [class="", key=NONE, label=""];
+15 -> 16  [class="", key=NONE, label=""];
+16 -> "-1"  [class="", key=NONE, label=""];
+17 -> 18  [class="", key=NONE, label=""];
+18 -> 19  [class="", key=NONE, label=""];
+19 -> 20  [class="", key=NONE, label=""];
+20 -> 21  [class="", key=NONE, label=""];
+21 -> "-1"  [class="", key=NONE, label=""];
+22 -> 23  [class="", key=NONE, label=""];
+23 -> 24  [class="", key=NONE, label=""];
+24 -> 25  [class="", key=NONE, label=""];
+25 -> 26  [class="", key=NONE, label=""];
+26 -> "-1"  [class="", key=NONE, label=""];
+27 -> 28  [class="", key=NONE, label=""];
+28 -> 29  [class="", key=NONE, label=""];
+29 -> 30  [class="", key=NONE, label=""];
+30 -> 31  [class="", key=NONE, label=""];
+31 -> "-1"  [class="", key=NONE, label=""];
+32 -> 33  [class="", key=NONE, label=""];
+33 -> 34  [class="", key=NONE, label=""];
+34 -> 35  [class="", key=NONE, label=""];
+35 -> 36  [class="", key=NONE, label=""];
+36 -> "-1"  [class="", key=NONE, label=""];
+37 -> 38  [class="", key=NONE, label=""];
+38 -> 39  [class="", key=NONE, label=""];
+39 -> 40  [class="", key=NONE, label=""];
+40 -> 41  [class="", key=NONE, label=""];
+41 -> "-1"  [class="", key=NONE, label=""];
+42 -> 43  [class="", key=NONE, label=""];
+43 -> 44  [class="", key=NONE, label=""];
+44 -> 45  [class="", key=NONE, label=""];
+45 -> 46  [class="", key=NONE, label=""];
+46 -> "-1"  [class="", key=NONE, label=""];
+47 -> 48  [class="", key=NONE, label=""];
+48 -> 49  [class="", key=NONE, label=""];
+49 -> 50  [class="", key=NONE, label=""];
+50 -> 51  [class="", key=NONE, label=""];
+51 -> "-1"  [class="", key=NONE, label=""];
+52 -> 53  [class="", key=NONE, label=""];
+53 -> 54  [class="", key=NONE, label=""];
+54 -> 55  [class="", key=NONE, label=""];
+55 -> 56  [class="", key=NONE, label=""];
+56 -> "-1"  [class="", key=NONE, label=""];
+57 -> "-1"  [class="", key=NONE, label=""];
+58 -> "-1"  [class="", key=NONE, label=""];
+59 -> "-1"  [class="", key=NONE, label=""];
+60 -> "-1"  [class="", key=NONE, label=""];
+61 -> 91  [class="", key=0];
+61 -> 92  [class="", key=0];
+61 -> 93  [class="", key=0];
+61 -> 94  [class="", key=0];
+61 -> 95  [class="", key=0];
+62 -> "-1"  [class="", key=NONE, label=""];
+64 -> "-1"  [class="", key=NONE, label=""];
+66 -> "-1"  [class="", key=NONE, label=""];
+68 -> "-1"  [class="", key=NONE, label=""];
+70 -> "-1"  [class="", key=NONE, label=""];
+71 -> 1  [class="", key=0];
+72 -> 2  [class="", key=0];
+73 -> 3  [class="", key=0];
+74 -> 4  [class="", key=0];
+75 -> 5  [class="", key=0];
+76 -> 6  [class="", key=0];
+77 -> 7  [class="", key=0];
+78 -> 12  [class="", key=0];
+79 -> 17  [class="", key=0];
+80 -> 22  [class="", key=0];
+81 -> 27  [class="", key=0];
+82 -> 32  [class="", key=0];
+83 -> 37  [class="", key=0];
+84 -> 42  [class="", key=0];
+85 -> 47  [class="", key=0];
+86 -> 52  [class="", key=0];
+87 -> 57  [class="", key=0];
+88 -> 58  [class="", key=0];
+89 -> 59  [class="", key=0];
+90 -> 60  [class="", key=0];
+91 -> 62  [class="", key=0];
+92 -> 64  [class="", key=0];
+93 -> 66  [class="", key=0];
+94 -> 68  [class="", key=0];
+95 -> 70  [class="", key=0];
+}
+`;
+    drawGraph(graph);
+  } else {
+    serveGraph();
+  }
+
+
+</script>
+</body>
+</html>

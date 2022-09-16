@@ -1,0 +1,273 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    
+    
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yup
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: plan_cities 
+  examples: |
+    - I want to travel
+    - Plan my trip
+    - Plan my trip to Maharashtra
+    - Can you guide me for my trip?
+    - I need assistance for travel
+
+- intent: goto_aurangabad
+  examples: |
+    - Aurangabad
+    - aurangabad
+
+- intent: goto_nashik
+  examples: |
+    - Nashik
+    - nashik
+  
+- intent: goto_pune
+  examples: |
+    - Pune
+    - pune
+
+- intent: goto_mumbai
+  examples: |
+    - Mumbai
+    - mumbai
+
+- intent: goto_ratnagiri
+  examples: |
+    - Ratnagiri
+    - ratnagiri
+
+- intent: goto_nagpur
+  examples: |
+    - Nagpur
+    - nagpur
+
+- intent: goto_amravati
+  examples: |
+    - Amravati
+    - amravati
+
+- intent: goto_sindhudurg       
+  examples: |
+    - Sindhudurg
+    - sindhudurg
+
+- intent: goto_raigad       
+  examples: |
+    - Raigad
+    - raigad
+
+- intent: goto_kolhapur       
+  examples: |
+    - Kolhapur
+    - kolhapur
+
+- intent: book_hotels
+  examples: |
+    - I want to book hotel
+    - I want to book resort
+    - hotels
+    - resorts
+    - I would like to make hotel booking
+    - Book hotel in Maharashtra for me
+    - Can you book hotel for my trip?
+    - book hotel room
+    - book room
+    - I want to book room
+
+- intent: book_aurangabad
+  examples: |
+    - Hotels in Aurangabad
+    - Show hotels in Aurangabad
+    - Book hotels in Aurangabad
+    - Find hotels in Aurangabad
+
+- intent: book_nashik
+  examples: |
+    - Hotels in Nashik
+    - Show hotels in Nashik
+    - Book hotels in Nashik
+    - Find hotels in Nashik
+
+- intent: book_pune
+  examples: |
+    - Hotels in Pune
+    - Show hotels in Pune
+    - Book hotels in Pune
+    - Find hotels in Pune
+
+- intent: book_mumbai
+  examples: |
+    - Hotels in Mumbai
+    - Show hotels in Mumbai
+    - Book hotels in Mumbai
+    - Find hotels in Mumbai
+
+- intent: book_ratnagiri
+  examples: |
+    - Hotels in Ratnagiri
+    - Show hotels in Ratnagiri
+    - Book hotels in Ratnagiri
+    - Find hotels in Ratnagiri
+
+
+- intent: book_nagpur
+  examples: |
+    - Hotels in Nagpur
+    - Show hotels in Nagpur
+    - Book hotels in Nagpur
+    - Find hotels in Nagpur
+
+- intent: book_amravati
+  examples: |
+    - Hotels in Amravati
+    - Show hotels in Amravati
+    - Book hotels in Amravati
+    - Find hotels in Amravati
+
+- intent: book_sindhudurg
+  examples: |
+    - Hotels in Sindhudurg
+    - Show hotels in Sindhudurg
+    - Book hotels in Sindhudurg
+    - Find hotels in Sindhudurg
+
+- intent: book_raigad
+  examples: |
+    - Hotels in Raigad
+    - Show hotels in Raigad
+    - Book hotels in Raigad
+    - Find hotels in Raigad
+
+- intent: book_kolhapur
+  examples: |
+    - Hotels in Kolhapur
+    - Show hotels in Kolhapur
+    - Book hotels in Kolhapur
+    - Find hotels in Kolhapur
+
+- intent: book_tickets
+  examples: |
+    - I want to book tickets
+    - Confirm my tickets
+    - Get me tickets
+    - tickets
+
+- intent: thanks
+  examples: |
+    - Thanks for your help
+    - Amazing!
+    - Thankyou
+    - that's great
+    - you're great
+
+# - intent: city_weather
+#   examples: |
+#     - Show me what's the weather in [Pune](location)
+#     - The weather condition in [Nasik] (location)
+#     - hows weather in [Aurangabad](location)
+#     - hows [Nagpur](location) today
+#     - Whats the weather in [Raigad] (location)
+#     - Temperature in [Kolhapur](location)
+#     - tell me the temperature at [Mumbai](location)
+#     - climate in [Sindhudurg](location)
+#     - temperature in [Amravati](location)
+#     - hows climate in[Ratnagiri](location)
+ 
+
+    
+    
+   
+   
+    
+
+    

@@ -1,0 +1,175 @@
+version: "3.1"
+nlu:
+- intent: goto_aurangabad
+  examples: |
+    - aurangabad
+- intent: goto_nashik
+  examples: |
+    - nashik
+- intent: goto_pune
+  examples: |
+    - pune
+- intent: goto_mumbai
+  examples: |
+    - Mumbai
+- intent: goto_ratnagiri
+  examples: |
+    - Ratnagiri
+- intent: goto_nagpur
+  examples: |
+    - Nagpur
+- intent: goto_amravati
+  examples: |
+    - amravati
+- intent: goto_sindhudurg
+  examples: |
+    - Sindhudurg
+- intent: goto_raigad
+  examples: |
+    - raigad
+- intent: goto_kolhapur
+  examples: |
+    - Kolhapur
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - am I talking to a human?
+    - am I talking to a bot?
+- intent: book_aurangabad
+  examples: |
+    - Hotels in Aurangabad
+    - Find hotels in Aurangabad
+    - Show hotels in Aurangabad
+- intent: book_nashik
+  examples: |
+    - Show hotels in Nashik
+    - Book hotels in Nashik
+    - Find hotels in Nashik
+- intent: book_pune
+  examples: |
+    - Find hotels in Pune
+    - Hotels in Pune
+    - Show hotels in Pune
+- intent: book_mumbai
+  examples: |
+    - Book hotels in Mumbai
+    - Hotels in Mumbai
+    - Show hotels in Mumbai
+- intent: book_ratnagiri
+  examples: |
+    - Book hotels in Ratnagiri
+    - Hotels in Ratnagiri
+    - Find hotels in Ratnagiri
+- intent: book_nagpur
+  examples: |
+    - Hotels in Nagpur
+    - Find hotels in Nagpur
+    - Book hotels in Nagpur
+- intent: book_amravati
+  examples: |
+    - Hotels in Amravati
+    - Book hotels in Amravati
+    - Show hotels in Amravati
+- intent: book_sindhudurg
+  examples: |
+    - Show hotels in Sindhudurg
+    - Hotels in Sindhudurg
+    - Book hotels in Sindhudurg
+- intent: book_raigad
+  examples: |
+    - Show hotels in Raigad
+    - Book hotels in Raigad
+    - Hotels in Raigad
+- intent: book_kolhapur
+  examples: |
+    - Find hotels in Kolhapur
+    - Show hotels in Kolhapur
+    - Hotels in Kolhapur
+- intent: plan_cities
+  examples: |
+    - Plan my trip
+    - Plan my trip to Maharashtra
+    - I need assistance for travel
+    - Can you guide me for my trip?
+- intent: affirm
+  examples: |
+    - that sounds good
+    - correct
+    - of course
+    - yup
+    - indeed
+    - yes
+- intent: deny
+  examples: |
+    - not really
+    - don't like that
+    - never
+    - I don't think so
+    - no way
+    - n
+- intent: goodbye
+  examples: |
+    - see you around
+    - cu
+    - good by
+    - see you later
+    - have a nice day
+    - bye bye
+    - cee you later
+    - bye
+    - good night
+- intent: book_hotels
+  examples: |
+    - I want to book hotel
+    - Can you book hotel for my trip?
+    - I would like to make hotel booking
+    - Book hotel in Maharashtra for me
+    - book room
+    - book hotel room
+    - I want to book room
+    - I want to book resort
+    - resorts
+- intent: greet
+  examples: |
+    - goodevening
+    - let's go
+    - hey
+    - good morning
+    - good evening
+    - moin
+    - goodmorning
+    - hello there
+    - good afternoon
+    - hi
+    - hey there
+    - hey dude
+- intent: mood_great
+  examples: |
+    - super stoked
+    - I am feeling very good
+    - extremely good
+    - great
+    - I am great
+    - wonderful
+    - so good
+    - feeling like a king
+    - I am going to save the world
+    - amazing
+    - so perfect
+    - perfect
+    - I am amazing
+- intent: mood_unhappy
+  examples: |
+    - extremly sad
+    - I don't feel very well
+    - super sad
+    - I am disappointed
+    - I'm so sad
+    - unhappy
+    - so saad
+    - not good
+    - not very good
+    - I am sad
+    - my day was horrible
+    - so sad
+    - very sad

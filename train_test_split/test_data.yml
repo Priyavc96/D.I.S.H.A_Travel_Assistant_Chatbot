@@ -1,0 +1,89 @@
+version: "3.1"
+nlu:
+- intent: goto_aurangabad
+  examples: |
+    - Aurangabad
+- intent: goto_nashik
+  examples: |
+    - Nashik
+- intent: goto_pune
+  examples: |
+    - Pune
+- intent: goto_mumbai
+  examples: |
+    - mumbai
+- intent: goto_ratnagiri
+  examples: |
+    - ratnagiri
+- intent: goto_nagpur
+  examples: |
+    - nagpur
+- intent: goto_amravati
+  examples: |
+    - Amravati
+- intent: goto_sindhudurg
+  examples: |
+    - sindhudurg
+- intent: goto_raigad
+  examples: |
+    - Raigad
+- intent: goto_kolhapur
+  examples: |
+    - kolhapur
+- intent: bot_challenge
+  examples: |
+    - are you a human?
+- intent: book_aurangabad
+  examples: |
+    - Book hotels in Aurangabad
+- intent: book_nashik
+  examples: |
+    - Hotels in Nashik
+- intent: book_pune
+  examples: |
+    - Book hotels in Pune
+- intent: book_mumbai
+  examples: |
+    - Find hotels in Mumbai
+- intent: book_ratnagiri
+  examples: |
+    - Show hotels in Ratnagiri
+- intent: book_nagpur
+  examples: |
+    - Show hotels in Nagpur
+- intent: book_amravati
+  examples: |
+    - Find hotels in Amravati
+- intent: book_sindhudurg
+  examples: |
+    - Find hotels in Sindhudurg
+- intent: book_raigad
+  examples: |
+    - Find hotels in Raigad
+- intent: book_kolhapur
+  examples: |
+    - Book hotels in Kolhapur
+- intent: plan_cities
+  examples: |
+    - I want to travel
+- intent: affirm
+  examples: |
+    - y
+- intent: deny
+  examples: |
+    - no
+- intent: goodbye
+  examples: |
+    - goodbye
+- intent: book_hotels
+  examples: |
+    - hotels
+- intent: greet
+  examples: |
+    - hello
+- intent: mood_great
+  examples: |
+    - so so perfect
+- intent: mood_unhappy
+  examples: |
+    - sad

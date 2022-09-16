@@ -1,0 +1,337 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - plan_cities
+  - goto_aurangabad
+  - goto_nashik
+  - goto_pune
+  - goto_mumbai
+  - goto_ratnagiri
+  - goto_nagpur
+  - goto_amravati
+  - goto_sindhudurg
+  - goto_raigad
+  - goto_kolhapur
+  - book_hotels
+  - book_aurangabad
+  - book_nashik
+  - book_pune
+  - book_mumbai
+  - book_ratnagiri
+  - book_nagpur
+  - book_amravati
+  - book_sindhudurg
+  - book_raigad
+  - book_kolhapur
+  - book_tickets
+  - thanks
+  #- city_weather
+
+# entities:
+#   - location
+
+# slots:
+#   location:
+#     type: text
+#   mappings:
+#   - type: custom
+#     action: action_weather
+
+# actions:
+#   - action_weather
+  
+  
+responses:
+  utter_greet:
+  - text: "Hello! I am D.I.S.H.A.🌎 Your travel assistant for Maharashtra!! \nHow can I help you today?"
+
+  utter_plan_cities:
+  - text: "There are quite attractive tourist places in Maharashtra.\nWhich city you would like to visit? \n◼️Aurangabad \n◼️Nashik \n◼️Pune \n◼️Mumbai \n◼️Ratnagiri \n◼️Nagpur \n◼️Amravati \n◼️Sindhudurg \n◼️Raigad \n◼️Kolhapur"
+
+  utter_goto_aurangabad:
+  - text: "Aurangabad is a city in Maharashtra state, in India. \nIt is bordered on the west by Nashik, on the north by Jalgaon, on the east by Jalna, and on the south by Ahmednagar. \nThe district has a total size of 10,100 km2, with an urban area of 141.1 km2 and a rural area of 9,958.9 km2.\nPlaces of Interest : \n[Ajanta Caves](https://www.maharashtratourism.gov.in/-/ajanta)\n[Bibi Ka Maqbara](https://aurangabad.gov.in/en/tourist-place/bibi-ka-makbara/)\n[Daulatabad](https://aurangabad.gov.in/en/tourist-place/daultabad/)\n[Ellora Caves](https://www.maharashtratourism.gov.in/-/ellora-cave)\n[Panchakki](https://www.maharashtratourism.gov.in/panchakki)\n[Chhatrapati Shivaji Maharaj Museum](https://aurangabad.tourismindia.co.in/chhatrapati-shivaji-maharaj-museum-aurangabad)\n[History Museum](https://www.trawel.co.in/city/Aurangabad/history-museum-aurangabad)\n[Aurangabad Soneri Mahal](https://www.maharashtratourism.gov.in/soneri-mahal)\n[Salim Ali Lake & Bird Sanctuary](https://www.transindiatravels.com/maharashtra/aurangabad/salim-ali-lake-bird-sanctuary/)"
+    image: "https://1.bp.blogspot.com/-8XZbqqBi0UQ/XW0GrEPYVNI/AAAAAAABcH4/VA3pLstoO4MhGh14D8-Wm4HM0QQ8dPVsACLcBGAs/s1600/Tourist-Attractions-In-Aurangabad.jpg"
+
+  utter_goto_nashik:
+  - text: "Nashik is an ancient holy city in Maharashtra, a state in western India.It is known for its links to the “Ramayana” epic poem. \nPlaces of Interest: \n[All-religion temple Tapovan](https://nashik.gov.in/tourist-place/all-religion-temple-tapovan/)\n[Mangi Tungi Temple](https://nashik.gov.in/tourist-place/mangi-tungi-temple/)\n[Panchvati](https://nashik.gov.in/tourist-place/panchvati/)\n[Pandav Caves](https://nashik.gov.in/tourist-place/pandav-caves/)\n[Shri Trimbakeshwar Temple](https://nashik.gov.in/tourist-place/trimbakeshwar-temple/)\n[Shree Saptshrungi Gad](https://nashik.gov.in/tourist-place/shree-saptshrungi-gad-vani/)\n[Ramkund](https://nashik.gov.in/tourist-place/ramkund-nashik/)\n[Shree Someshwar Temple](https://nashik.gov.in/tourist-place/shree-someshwar-temple/)\n[Centre for Artillery](https://nashik.gov.in/tourism/tourist-places/)\n[Anjaneri Coin Museum](https://nashik.gov.in/tourism/tourist-places/)\n[The Dadasaheb Phalake Museum](https://nashik.gov.in/tourism/tourist-places/)\n[The Mineral Museum of Gargoti](https://nashik.gov.in/tourism/tourist-places/)\n[Waterfall at Dudhsagar](https://nashik.gov.in/tourism/tourist-places/)"
+    image: "https://bestinnashik.com/wp-content/uploads/2021/02/Best-Tourist-Places-in-Nashik-Best-in-Nashik.jpg"
+
+  utter_goto_pune:
+  - text: "Pune is a sprawling city in the western Indian state of Maharashtra.\nIt was once the base of the Peshwas (prime ministers) of the Maratha Empire, which lasted from 1674 to 1818.\nPimpri Chinchwad is located at the West of Pune city, touching the Pune-Mumbai National highway.\nThe corporation covers the area of Nigdi, Akurdi, Pimpri, Chinchwad and Bhosari.The said area is developed by MIDC as an industrial zone.\nPlaces of Interest:\n[Lonavala-Khandala](https://pune.gov.in/tourist-place/lonavala-khandala/)\n[Sinhagad](https://pune.gov.in/tourist-place/sinhagad/)\n[Aagakhan Palace](https://www.maharashtratourism.gov.in/-/aga-khan-palace-popular-cities)\n[Shanivarwada](https://pune.gov.in/tourist-place/shaniwarwada/)\n[Shivneri Fort](https://pune.gov.in/tourist-place/shivneri/)\n[Khadakwasala Dam](https://pune.gov.in/tourist-place/khadakwasala-dam/)\n[Sarasbaug-Peshve Park](https://pune.gov.in/tourist-place/sarasbaug-peshve-park/)\n[Lal Mahal](https://pune.gov.in/tourist-place/lal-mahal/)\n[Rajgad fort](https://www.maharashtratourism.gov.in/-/rajgad)\n[Lingana fort](https://www.fortsmaharashtra.com/lingana-fort/)\n[Harihareshwar](https://www.maharashtratourism.gov.in/-/harihareshwar)\n[Katraj snake park](https://www.maharashtratourism.gov.in/-/the-rajiv-gandhi-zoological-park)\n[Osho Aashram](https://punetourism.co.in/osho-ashram-pune)"
+    image: "https://punesmartcity.in/wp-content/uploads/2017/08/aboutpune.jpg"
+
+  utter_goto_mumbai:
+  - text: "Mumbai is India's financial, commercial, and entertainment centre.It is also one of the top ten global financial flow centres, contributing 6.16 percent of India's GDP and accounting for 25% of industrial output, 70% of marine trade in India (Mumbai Port Trust and JNPT), and 70% of capital transactions.\nImportant financial institutions, such as the Reserve Bank of India, are located in the city.\nPlaces of Interest:\n[Saint George fort](http://historicfortsofindia.blogspot.com/2017/07/fort-george-mumbai.html)\n[Juhu](https://www.maharashtratourism.gov.in/-/juhu)\n[Girgaum Chowpatty](https://www.maharashtratourism.gov.in/-/girgaon-chowpatty)\n[Elephanta Caves](https://www.maharashtratourism.gov.in/-/elephanta-cave-popular-cities)\n[Kamla Nehru park](https://www.indiaeasytrip.com/kamla-nehru-park-mumbai.html)\n[Sanjay Gandhi National Park](https://www.maharashtratourism.gov.in/-/sanjay-gandhi-national-park)\n[Shivaji park Maharashtra nature park](https://maharashtranaturepark.org/)\n[Kamala Nehru Park](https://www.indiaeasytrip.com/kamla-nehru-park-mumbai.html)\n[The Gateway of India](https://www.maharashtratourism.gov.in/gateway-of-india)\n[Jehangir Art Gallery](https://www.maharashtratourism.net/museums/jehangir-art-gallery.html#:~:text=Jehangir%20Art%20Gallery%20is%20located,the%20work%20of%20art%20here.)\n[Powai Hills and Lake](https://www.maharashtratourism.gov.in/-/powai-lake)"
+    image: "https://tsncdn.truescoopnews.com/images/full/newsinner_20201212104717_1.jpeg"
+
+  utter_goto_ratnagiri:
+  - text: "Ratnagiri is a port town in Maharashtra, western India. Overlooking the Arabian Sea, Ratnadurg Fort has the Bhagwati temple and a lighthouse.\nPlaces of Interest:\n[Ambolgad Fort](https://www.mtdc.co.in/forts/ambolgad-fort-map/)\n[Gopalgad](https://www.maharashtratourism.gov.in/-/gopalgad)\n[Bankot or Victoria Fort](https://www.maharashtratourism.gov.in/-/bankot-fort)\n[Bharatgad Fort](https://www.maharashtratourism.gov.in/-/bharatgad-fort)\n[Devgad](https://www.maharashtratourism.gov.in/-/devgad)\n[Sindhudurg Fort](https://www.maharashtratourism.gov.in/web/mh-tourism/-/sindhudurg-fort)\n[Guhagar Beach](https://www.maharashtratourism.gov.in/-/guhagar)\n[Murud](https://www.maharashtratourism.gov.in/-/murud-janjira)\n[Velneshwar Beach](https://www.maharashtratourism.gov.in/-/velneshwar)\n[Panhale kaji](https://www.maharashtratourism.gov.in/-/panhale-kaji)"
+    image: "https://bluestoneholiday.com/wp-content/uploads/2020/02/Places-to-Visit-in-Ratnagiri-780x470.jpg"
+
+  utter_goto_nagpur:
+  - text: "Nagpur is a large city in the central Indian state of Maharashtra.\nPlaces of Interest:\n[Ramtek Fort](https://www.maharashtratourism.gov.in/-/ramtek-nagpur)\n[Nagardhan Fort](https://www.maharashtratourism.gov.in/-/nagardhan-fort)\n[Sitabuldi Fort](https://nagpurtourism.co.in/sitabuldi-fort-nagpur)\n[Pench National Park](https://www.maharashtratourism.gov.in/-/the-pench-the-pandit)\n[Khindsi Lake](https://www.maharashtratourism.gov.in/-/khindsi-lake)\n[Futala Lake](https://nagpurtourism.co.in/futala-lake-nagpur)\n[Maharaj Baug](https://nagpurtourism.co.in/maharaj-baug-and-zoo-nagpur)\n[Japanese Garden](https://www.thrillophilia.com/attractions/japanese-rose-garden)\n[Sakkardara Lake](https://nagpur.gov.in/tourist-place/lake-garden-sakkardara/)"
+    image: "https://www.royalorchidhotels.com/images/Blog/23_Feb_2022_11_50_29WhatsApp%20Image%202022-02-21%20at%2015.05.13.jpeg"
+
+  utter_goto_amravati:
+  - text: "Amravati is the second largest city in the Vidarbha region and ninth largest city in Maharashtra, India. It is administrative headquarters of Amravati district and Amravati division which includes Akola, Buldhana, Washim and Yavatmal districts.\nIt is one of the Maharashtra's nominated city under Smart Cities Mission.\nPlaces of Interest:\n[Melghat](https://www.maharashtratourism.gov.in/hi/magical-melghat)\n[Kalapani Dam](http://tourmet.com/kalapani-dam/)\n[Semadhoh Tiger Project](http://tourmet.com/semadhoh-tiger-project/)\n[Hariken Point](http://tourmet.com/hariken-point/)\n[Malviya and Sunrise Point](http://tourmet.com/malviya-sunrise-point/)\n[Gawilgad Fort](https://www.maharashtratourism.gov.in/-/gawilgadh-fort)"
+    image: "https://bluestoneholiday.com/wp-content/uploads/2020/02/Places-to-Visit-in-Amravati-780x470.jpg"
+
+  utter_goto_sindhudurg:
+  - text: "Sindhudurg district covers a total size of 5,207 square kilometres.\nThe only fort with Shivaji's temple and a palm imprint of King Shivaji is Sindhudurg fort, which was established in the 16th century by King Shivaji.\nSindhudurg district has 37 forts, the most in Maharashtra, and includes all types of forts (Jaldurg - sea), Bhuikot - land fort), and others (Giri- fort on hilltop).\nPlaces of Interest:\n[Sindhudurg Fort](https://www.maharashtratourism.gov.in/-/sindhudurg-fort)\n[Bharatgad Fort](https://www.maharashtratourism.gov.in/-/bharatgad-fort)\n[Ramgad fort](https://www.maharashtratourism.gov.in/-/ramgad)\n[Devgad Fort](https://www.maharashtratourism.gov.in/-/devgad)\n[Vijaydurg Fort](https://www.maharashtratourism.gov.in/-/vijaydurg)\n[Chivla Beach](https://www.tourmyindia.com/states/maharashtra/chivla-beach-malvan.html)\n[Tarkali Beach](https://www.maharashtratourism.gov.in/-/tarkarli-beach)\n[Devbag Beach](https://www.maharashtratourism.gov.in/-/devbag)\n[Achara Beach](https://www.konkankatta.in/2017/08/achara-beach-sindhudurg.html)\n[Sawantwadi Palace](https://www.konkankatta.in/2014/09/sawantwadi-palace.html)"
+    image: "https://i.ytimg.com/vi/RBJsHMYj_KQ/maxresdefault.jpg"
+
+  utter_goto_raigad:
+  - text: "Raigad district, previously Colaba district, is a district in the Konkan division of Maharashtra, India.\nThe district was renamed to Raigad after the fort that was the first capital of the former Maratha Empire, which in turn was renamed from its earlier name - Rairi.\nPlaces of Interest:\n[Raigad fort](https://www.maharashtratourism.gov.in/-/raigad-fort)\n[Lingana fort](https://www.maharashtratourism.gov.in/-/lingana)\n[Birwadi Fort](https://www.maharashtratourism.gov.in/-/birwadi-fort)\n[Harihareshwar](https://www.maharashtratourism.gov.in/-/harihareshwar)\n[Rajmachi fort](https://www.maharashtratourism.gov.in/-/rajmachi-fort)\n[Alibag](https://www.maharashtratourism.gov.in/-/alibaug)\n[Kolaba](https://www.maharashtratourism.gov.in/-/kolaba-fort)\n[Murud Janjira](https://www.maharashtratourism.gov.in/-/janjira-fort)"
+    image: "https://www.indianetzone.com/photos_gallery/90/2_Tourist_Attractions_in_Raigad_District.jpg"
+
+  utter_goto_kolhapur:
+  - text: "Kolhapur is a city on the banks of the Panchaganga River, in the west Indian state of Maharashtra.\nIt is known for its temples, like the ancient Mahalakshmi Temple, a Hindu pilgrimage site.\nPlaces of Interest:\n[Samangad](https://www.maharashtratourism.gov.in/-/samangad)\n[Bavda fort](https://www.maharashtratourism.gov.in/-/gagan-bavda-popular-cities)\n[Bhudargad](https://www.maharashtratourism.gov.in/-/bhudargad-fort)\n[Panhala](https://www.maharashtratourism.gov.in/-/panhala-fort)\n[Pavangad](https://www.maharashtratourism.gov.in/-/pavangad-fort)\n[Rangna fort](https://www.maharashtratourism.gov.in/-/rangana-fort)\n[Pargad fort](https://www.maharashtratourism.gov.in/-/paargad-fort)\n[GandharvGad](https://www.maharashtratourism.gov.in/-/gandharvgad)\n[KalanidhiGad](https://www.maharashtratourism.gov.in/-/kalanandigad)\n[Panhala](https://www.maharashtratourism.gov.in/-/panhala-fort)\n[Rankala Lake](https://www.maharashtratourism.gov.in/-/%E0%A4%B0%E0%A4%82%E0%A4%95%E0%A4%BE%E0%A4%B2%E0%A4%BE-%E0%A4%9D%E0%A5%80%E0%A4%B2)"
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/KolhapurHeritage.jpg/640px-KolhapurHeritage.jpg"
+
+  utter_book_hotels:
+  - text: "In which city do you want to book hotels?"
+
+  utter_book_aurangabad:
+  - text: "Welcomhotel Rama International\n🏨[Website](https://www.itchotels.com/in/en/welcomhotelramainternational-aurangabad)\t🗺️[Directions](https://www.google.com/maps/place/Welcomhotel+By+ITC+Hotels,+Rama+International,+Aurangabad/@19.8758946,75.3566524,17z/data=!3m1!4b1!4m8!3m7!1s0x3bdb98159f206975:0x38405bac1ce1bafa!5m2!4m1!1i2!8m2!3d19.8758946!4d75.3588411)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/1c/c5/d3/f1/welcomhotel-rama-international.jpg"
+
+  utter_book_aurangabad_two:
+  - text: "Lemon Tree Hotel\n🏨[Website](https://www.lemontreehotels.com/)\t🗺️[Directions](https://www.google.com/maps/place/Lemon+Tree+Hotel,+Aurangabad/@19.8749915,75.3633678,17z/data=!3m1!4b1!4m8!3m7!1s0x3be7c852830023b1:0xff297d809d19091d!5m2!4m1!1i2!8m2!3d19.8749915!4d75.3655565)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/1b/19/c8/e5/ta-img-20200307-115747.jpg"
+
+  utter_book_aurangabad_three:
+  - text: "Vivanta Aurangabad\n🏨[Website](https://www.vivantahotels.com/en-in/aurangabad-maharashtra/)\t🗺️[Directions](https://www.google.com/maps/place/Vivanta+Aurangabad/@19.907598,75.3442783,17z/data=!3m1!4b1!4m8!3m7!1s0x3bdb980cce736e81:0x4c36e63f4e1aaece!5m2!4m1!1i2!8m2!3d19.9075983!4d75.3464695)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/1b/3a/3e/ad/exterior.jpg"
+
+  utter_book_aurangabad_four:
+  - text: "The Ambassador Ajanta\n🏨[Website](https://ambassadorindia.com/ambassador-ajanta-aurangabad/)\t🗺️[Directions](https://www.google.com/maps/place/Ambassador+Ajanta+Hotel,+Aurangabad/@19.8760378,75.3588082,17z/data=!3m1!4b1!4m8!3m7!1s0x3bdba292662b8a6b:0x126b18477bab895!5m2!4m1!1i2!8m2!3d19.8760378!4d75.3609969)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/19/fe/98/f4/hotel-garden-lawns.jpg"
+
+  utter_book_aurangabad_five:
+  - text: "The Fern Residency\n🏨[Website](https://www.fernhotels.com/the-fern-residency-aurangabad/)\t🗺️[Directions](https://www.google.com/maps/place/The+Fern+Residency,+Aurangabad/@19.8780264,75.3640346,17z/data=!3m1!4b1!4m8!3m7!1s0x3bdba2ece9a78d39:0x9d11931433524ee6!5m2!4m1!1i2!8m2!3d19.8780099!4d75.3661554)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/19/c6/da/0f/facade-of-the-hotel.jpg"
+
+  utter_book_nashik:
+  - text: "The Source at Sula\n🏨[Website](https://sulavineyards.com/stay-with-us.php)\t🗺️[Directions](https://www.google.com/maps/place/The+Source+at+Sula/@20.0055475,73.6861822,17z/data=!3m1!4b1!4m8!3m7!1s0x3bddedba9bdb2f95:0x418eb1cf59cf189!5m2!4m1!1i2!8m2!3d20.0055616!4d73.688366)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/1b/65/52/ba/the-source-at-sula.jpg"
+
+  utter_book_nashik_two:
+  - text: "Hotel Express Inn\n🏨[Website](https://expressinnindia.com/)\t🗺️[Directions](https://www.google.com/maps/place/Hotel+Express+Inn/@19.9539991,73.7549139,16.48z/data=!4m8!3m7!1s0x3bddea71470575a3:0xf0dc8cacb63d3b0!5m2!4m1!1i2!8m2!3d19.9525394!4d73.755288)"
+    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/8d/86/35/express-inn-elevation.jpg?w=1200&h=-1&s=1"
+
+  utter_book_nashik_three:
+  - text: "Courtyard By Marriott \n🏨[Website](https://www.marriott.com/en-us/hotels/iskcn-courtyard-nashik/overview/)\t🗺️[Directions](https://www.google.com/maps/place/Courtyard+by+Marriott+Nashik/@19.9904538,73.787462,17z/data=!3m1!4b1!4m8!3m7!1s0x39631bd417575a59:0x116839bdf56a4078!5m2!4m1!1i2!8m2!3d19.9904538!4d73.7896507)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/1c/63/a8/d2/exterior.jpg"
+
+  utter_book_nashik_four:
+  - text: "Radisson Blu Hotel\n🏨[Website](https://www.radissonhotels.com/en-us/hotels/radisson-blu-spa-nashik?cid=a:se+b:gmb+c:apac+i:local+e:rdb+d:ind+h:INMHISK1)\t🗺️[Directions](https://www.google.com/maps/place/Radisson+Blu+Hotel+%26+Spa,+Nashik/@19.9462524,73.7537054,17z/data=!3m1!4b1!4m8!3m7!1s0x3bdd9511596c6ddb:0x4fab85b2bee5eade!5m2!4m1!1i2!8m2!3d19.9462524!4d73.7558941)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/23/5c/0e/61/radisson-blu-hotel-spa.jpg"
+
+  utter_book_nashik_five:
+  - text: "The Gateway Hotel Ambad,Nashik\n🏨[Website](https://www.tajhotels.com/en-in/taj/ambad-nashik/?utm_source=Google&utm_campaign=Ambad-Nashik&utm_medium=Local)\t🗺️[Directions](https://www.google.com/maps/place/The+Gateway+Hotel+Ambad+Nashik/@19.9573831,73.7521923,17z/data=!3m1!4b1!4m8!3m7!1s0x3bddeb0e326a2591:0x1f33d07ebd19c78!5m2!4m1!1i2!8m2!3d19.9573585!4d73.7544078)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/1b/94/56/f9/exterior.jpg"
+
+  utter_book_pune:
+  - text: "The Central Park Hotel\n🏨[Website](https://thecentralparkhotel.com/)\t🗺️[Directions](https://www.google.com/maps/place/The+Central+Park+Hotel,+Agarkar+Nagar,+Pune,+Maharashtra+411001/@18.5274023,73.8784507,17z/data=!3m1!4b1!4m5!3m4!1s0x3bc2c05741d68593:0x12df113b37b6973!8m2!3d18.5274996!4d73.8783844)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/1c/df/1e/36/exterior-view.jpg"
+
+  utter_book_pune_two:
+  - text: "The Corinthians Resort & Club\n🏨[Website](https://www.thecorinthianspune.com/)\t🗺️[Directions](https://www.google.com/maps/place/The+Corinthians+Resort+and+Club+Pune/@18.4633139,73.9177443,16.74z/data=!4m8!3m7!1s0x3bc2ea3c2c9a97fb:0xa084be732931ff0e!5m2!4m1!1i2!8m2!3d18.4632616!4d73.919309)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/03/c5/40/94/the-corinthians-boutique.jpg"
+
+  utter_book_pune_three:
+  - text: "Lemon Tree Premier,Pune\n🏨[Website](https://www.lemontreehotels.com/lemon-tree-premier/pune/city-center-pune.aspx)\t🗺️[Directions](https://www.google.com/maps/place/Lemon+Tree+Premier+Pune/@18.5277123,73.8745374,17z/data=!3m1!4b1!4m8!3m7!1s0x3bc2c059dafb7ac5:0xf660a3faf554f88e!5m2!4m1!1i2!8m2!3d18.5277123!4d73.8767261)"
+    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/75/f1/b2/getlstd-property-photo.jpg?w=1100&h=-1&s=1"
+
+  utter_book_pune_four:
+  - text: "Royal Orchid Central Pune\n🏨[Website](https://www.royalorchidhotels.com/royal-orchid-central-pune/overview)\t🗺️[Directions](https://www.google.com/maps/place/Royal+Orchid+Central/@18.546443,73.9044565,17z/data=!3m1!4b1!4m8!3m7!1s0x3bc2c1a0e7ebb2b9:0x27425ad0e9ea26a9!5m2!4m1!1i2!8m2!3d18.546443!4d73.9066452)"
+    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/81/b1/5e/exterior.jpg?w=800&h=-1&s=1"
+
+  utter_book_pune_five:
+  - text: "Hyatt Pune\n🏨[Website](https://www.hyatt.com/en-US/hotel/india/hyatt-pune/pnqhy?src=corp_lclb_gmb_seo_pnqhy)\t🗺️[Directions](https://www.google.com/maps/place/Hyatt+Pune/@18.554211,73.9025093,17z/data=!3m1!4b1!4m8!3m7!1s0x3bc2c116f67257dd:0x3cfb9881ad224c0!5m2!4m1!1i2!8m2!3d18.554211!4d73.904698)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/23/e1/36/21/exterior.jpg"
+
+  utter_book_mumbai:
+  - text: "The Lalit Mumbai\n🏨[Website](http://www.thelalit.com/the-lalit-mumbai/)\t🗺️[Directions](https://www.google.com/maps/place/The+LaLiT+Mumbai/@19.1053238,72.8736905,17z/data=!3m1!4b1!4m8!3m7!1s0x3be7c86a85f28959:0x2b1e48b3c1675b87!5m2!4m1!1i2!8m2!3d19.1053238!4d72.8758792)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/1d/10/99/d0/swimming-pool.jpg"
+
+  utter_book_mumbai_two:
+  - text: "Taj Lands End\n🏨[Website](https://www.tajhotels.com/en-in/taj/taj-lands-end-mumbai/?utm_source=Google&utm_campaign=taj-lands-end-mumbai&utm_medium=Local)\t🗺️[Directions](https://www.google.com/maps/place/Taj+Lands+End,+Mumbai/@19.0437211,72.8170355,17z/data=!3m1!4b1!4m8!3m7!1s0x3be7c945f2fb1149:0xa2ba742a39963b31!5m2!4m1!1i2!8m2!3d19.0437211!4d72.8192242)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/1b/4e/9a/d4/exterior.jpg"
+
+  utter_book_mumbai_three:
+  - text: "Goldfinch Hotel Mumbai\n🏨[Website](https://www.goldfinchhotels.com/goldfinch-mumbai/)\t🗺️[Directions](https://www.google.com/maps/place/Goldfinch+Hotel/@19.1197671,72.8679451,17z/data=!3m1!4b1!4m8!3m7!1s0x3be7c82344fb01b9:0x1e176436ad437273!5m2!4m1!1i2!8m2!3d19.1197671!4d72.8701338)"
+    image: "https://lh5.googleusercontent.com/p/AF1QipOeDTwgtnH-YrubhOG2xaOvkOooiorxlhoCVKd7=w408-h475-k-no"
+
+  utter_book_mumbai_four:
+  - text: "Sahara Star Hotel\n🏨[Website](https://www.saharastar.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb)\t🗺️[Directions](https://www.google.com/maps/place/Hotel+Sahara+Star/@19.0957428,72.8516409,17z/data=!3m1!4b1!4m8!3m7!1s0x3be7c9ae7603612f:0x13cd7021e7dec9de!5m2!4m1!1i2!8m2!3d19.0957428!4d72.8538296)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/14/85/f5/af/lobby.jpg"
+
+  utter_book_mumbai_five:
+  - text: "Trident Hotel\n🏨[Website](https://www.tridenthotels.com/hotels-in-mumbai-nariman-point?utm_source=GMBlisting&utm_medium=organic)\t🗺️[Directions](https://www.google.com/maps/place/Trident+Hotel,+Nariman+Point+Mumbai/@18.9277306,72.8190098,17z/data=!3m1!4b1!4m8!3m7!1s0x3be7d1ef25d1fdc1:0xe3f924327fd9fdef!5m2!4m1!1i2!8m2!3d18.9277306!4d72.8211985)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/1b/a5/c6/a1/lobby.jpg"
+
+  utter_book_ratnagiri:
+  - text: "Kohinoor Samudra Beach Resort\n🏨[Website](https://www.kohinoorhotels.com/kohinoor-samudra-ratnagiri/)\t🗺️[Directions](https://www.google.com/maps/place/Kohinoor+Samudra+Beach+Resort,+Ratnagiri/@16.9651186,73.2948814,17z/data=!3m1!4b1!4m8!3m7!1s0x3be7cecf628a22c1:0x1eb374db82a00d2d!5m2!4m1!1i2!8m2!3d16.9651186!4d73.2970701)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/1c/d8/86/20/exterior-view.jpg"
+
+  utter_book_ratnagiri_two:
+  - text: "Cherilyn Monta Resort\n🏨[Website](https://www.cherilynmonta.com/)\t🗺️[Directions](https://www.google.com/maps/place/Cherilyn+Monta+Resort/@16.7250985,73.6009287,17z/data=!3m1!4b1!4m8!3m7!1s0x3bc1d16c8830a7f3:0x2230e0789082408a!5m2!4m1!1i2!8m2!3d16.7250985!4d73.6031174)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/19/f7/28/03/cherilyn-monta-resort.jpg"
+
+  utter_book_ratnagiri_three:
+  - text: "Mango Valley Resort\n🏨[Website](https://mangovalleyresorts.com/)\t🗺️[Directions](https://www.google.com/maps/place/%E0%A4%AE%E0%A4%BE%E0%A4%82%E0%A4%97%E0%A5%8B+%E0%A4%B5%E0%A5%88%E0%A4%B2%E0%A5%80+%E0%A4%B0%E0%A4%BF%E0%A4%B8%E0%A5%8B%E0%A4%B0%E0%A5%8D%E0%A4%9F+%E0%A4%97%E0%A4%A3%E0%A4%AA%E0%A4%A4%E0%A5%80%E0%A4%AA%E0%A5%81%E0%A4%B3%E0%A5%87/@17.10271,73.2958324,17z/data=!3m1!4b1!4m8!3m7!1s0x3bea0e248cf523f9:0x8b499129ddf12ae!5m2!4m1!1i2!8m2!3d17.1026712!4d73.2979698)"
+    image: "https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/201811281301162654-3ebd711af2dc11e8aa460242ac110002.jpg"
+
+  utter_book_ratnagiri_four:
+  - text: "Hotel Sea Fans\n🏨[Website](https://hotel-sea-fans.business.site/?utm_source=gmb&utm_medium=referral)\t🗺️[Directions](https://www.google.com/maps/place/Hotel+Sea+Fans/@16.9898268,73.2823437,17z/data=!3m1!4b1!4m8!3m7!1s0x3bea0d676e5b78bb:0x18bf9862666d2ab7!5m2!4m1!1i2!8m2!3d16.9898268!4d73.2845324)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/1d/8a/f8/42/hotel-grounds.jpg"
+
+  utter_book_ratnagiri_five:
+  - text: "The Blue View Villas\n🏨[Website](https://www.booking.com/hotel/in/the-blue-view-by-timber.en-gb.html?aid=356980&label=gog235jc-1DCAsobEIXdGhlLWJsdWUtdmlldy1ieS10aW1iZXJIM1gDaGyIAQGYAQm4ARfIAQzYAQPoAQGIAgGoAgO4AtH28ZgGwAIB0gIkNDZiODhiZDAtODQzOC00ODJkLWFiMjctOTk0NzZmZTM1ZTk32AIE4AIB&sid=711688c20b882c991f5ddfccb1b3ffde&dist=0&keep_landing=1&sb_price_type=total&type=total&)\t🗺️[Directions](https://www.google.com/maps/place/The+Blue+View+Villas/@16.9572975,73.2958568,17z/data=!3m1!4b1!4m8!3m7!1s0x3bea0d22b314f7d9:0x4d186adc4422b01e!5m2!4m1!1i2!8m2!3d16.9572975!4d73.2980455)"
+    image: "https://lh5.googleusercontent.com/p/AF1QipPaJPbrBe9OBTaxBgWPABD6-asm0W9-K3W3T3mU=w408-h333-k-no"
+
+  utter_book_nagpur:
+  - text: "The Pride Hotel Nagpur\n🏨[Website](https://www.pridehotel.com/the-pride-hotel-nagpur/)🗺️[Directions](https://www.google.com/maps/place/The+Pride+Hotel+Nagpur/@21.0870515,79.0621989,17z/data=!3m1!4b1!4m8!3m7!1s0x3bd4bfa787fcb4f1:0x25ae5f7ade15b8f7!5m2!4m1!1i2!8m2!3d21.0870515!4d79.0643876)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/1d/87/56/6d/front-view.jpg"
+
+  utter_book_nagpur_two:
+  - text: "Le Meridien Nagpur\n🏨[Website](https://www.marriott.com/en-us/hotels/nagmd-le-meridien-nagpur/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0)\t🗺️[Directions](https://www.google.com/maps/place/Le+M%C3%A9ridien+Nagpur/@21.0428385,79.0530588,17z/data=!3m1!4b1!4m8!3m7!1s0x3bd4c0e8ae04f11d:0x1d8e16d3782c49ae!5m2!4m1!1i2!8m2!3d21.0428385!4d79.0552475)"
+    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/9d/b8/ae/exterior.jpg?w=1200&h=-1&s=1"
+
+  utter_book_nagpur_three:
+  - text: "WelcomHeritage Tadoba Vanya Villas Resort & Spa\n🏨[Website](https://www.welcomheritagehotels.in/hotel-details/tadoba-vanyavillas-resort-spa)\t🗺️[Directions](https://www.google.com/maps/place/WelcomHeritage+Tadoba+Vanya+Villas+Resort+%26+Spa/@20.3868148,79.3757161,17z/data=!3m1!4b1!4m8!3m7!1s0x3bd34b7c44436d3d:0x96ad2e2059c6bdec!5m2!4m1!1i2!8m2!3d20.3868148!4d79.3779048)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/23/83/37/ed/welcomheritage-tadoba.jpg"
+
+  utter_book_nagpur_four:
+  - text: "Regenta Central Hotel & Convention Centre\n🏨[Website](https://www.royalorchidhotels.com/regenta-central-hotel-convention-centre-nagpur/overview)\t🗺️[Directions](https://www.google.com/maps/place/Regenta+Central+Hotel+%26+Convention+Centre/@21.1396118,79.1176133,17z/data=!3m1!4b1!4m8!3m7!1s0x3bd4c7ab11ba3647:0x43057e4cb0eb6be5!5m2!4m1!1i2!8m2!3d21.1396116!4d79.1198116)"
+    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/01/4b/c1/getlstd-property-photo.jpg?w=1200&h=-1&s=1"
+
+  utter_book_nagpur_five:
+  - text: "Urban Hermitage\n🏨[Website](https://urbanhermitage.in/)\t🗺️[Directions](https://www.google.com/maps/place/Urban+Hermitage/@21.0886757,79.0624264,17z/data=!3m1!4b1!4m8!3m7!1s0x3bd4bf09deb87747:0x47b8f21cab4d24c6!5m2!4m1!1i2!8m2!3d21.0886757!4d79.0646151)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/09/f0/7a/01/getlstd-property-photo.jpg"
+
+  utter_book_amravati:
+  - text: "Hotel Regency\n🏨[Website](https://website--108532035621095173223-hotel.business.site/?utm_source=gmb&utm_medium=referral)\t🗺️[Directions](https://www.google.com/maps/place/Hotel+Regency/@20.9295653,77.7579932,17z/data=!3m1!4b1!4m8!3m7!1s0x3bd6a4a42cec1519:0x642162331964f982!5m2!4m1!1i2!8m2!3d20.9295653!4d77.7601819)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/1a/27/84/af/getlstd-property-photo.jpg"
+
+  utter_book_amravati_two:
+  - text: "Hotel Rajdhani\n🏨[Website](https://hotelrajdhani-hotel.business.site/)\t🗺️[Directions](https://www.google.com/maps/place/Hotel+Rajdhani/@20.928282,77.7495713,17z/data=!3m1!4b1!4m9!3m8!1s0x3bd6a4ae971fed1b:0xde0b959a4770e2d3!5m3!1s2022-10-01!4m1!1i2!8m2!3d20.928282!4d77.75176?hl=en-IN)"
+    image: "https://r1imghtlak.mmtcdn.com/3deeef06c80711e9a18a0242ac11000c.jfif?&output-quality=75&downsize=910:612&crop=910:612;20,0&output-format=jpg"
+
+  utter_book_amravati_three:
+  - text: "Empire stay\n🏨[Website](https://www.makemytrip.com/hotels/empire_stay_amravati-details-amravati.html)\t🗺️[Directions](https://www.google.com/maps/place/Empire+Stay/@20.916171,77.7511299,17z/data=!3m1!4b1!4m9!3m8!1s0x3bd6a5684dda9ca3:0x90450bddf91f82d2!5m3!1s2022-10-01!4m1!1i2!8m2!3d20.9162576!4d77.7533379)"
+    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/87/18/8c/outer-look.jpg?w=1200&h=-1&s=1"
+
+  utter_book_amravati_four:
+  - text: "Sunrise Inn\n🏨[Website](https://hotelsunriseinn.com/)\t🗺️[Directions](https://www.google.com/maps/place/Hotel+Sunrise+Inn/@20.9335369,77.7556334,17z/data=!3m1!4b1!4m9!3m8!1s0x3bd6a50add670f45:0x6c15028d17446924!5m3!1s2022-10-01!4m1!1i2!8m2!3d20.9335333!4d77.757822)"
+    image: "https://lh3.googleusercontent.com/p/AF1QipMtGbXPI88mJSKD54zbdLOKpPcVnbwZWa4AEqn3=w296-h202-n-k-rw-no-v1"
+
+  utter_book_amravati_five:
+  - text: "BTP Inn\n🏨[Website](http://www.btpinn.com/)\t🗺️[Directions](https://www.google.com/maps/place/BTP+Inn/@21.3988218,77.3161416,17z/data=!3m1!4b1!4m9!3m8!1s0x3bd657d9496c9b7f:0x4f7d555f3827e3dd!5m3!1s2022-10-01!4m1!1i2!8m2!3d21.3988218!4d77.3183303)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/1c/a3/60/ed/hotel-facade-exterior.jpg"
+
+  utter_book_sindhudurg:
+  - text: "Hotel Chivala Beach\n🏨[Website](http://www.zantyehotels.com/)\t🗺️[Directions](https://www.google.com/maps/place/Hotel+Chivala+Beach/@16.061507,73.4609023,17z/data=!3m1!4b1!4m9!3m8!1s0x3beaa8023ba951b1:0xdf859a9f66ac6f55!5m3!1s2022-10-01!4m1!1i2!8m2!3d16.0614903!4d73.4630547)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/1c/7c/6d/03/hotel-chivala-beach.jpg"
+
+  utter_book_sindhudurg_two:
+  - text: "Samant Beach Resort and villa\n🏨[Website](https://samantbeachresort.com/)\t🗺️[Directions](https://www.google.com/maps/place/Samant+Beach+Resort+and+villa/@15.9496968,73.5037802,17z/data=!3m1!4b1!4m9!3m8!1s0x3bc001a42f274e8b:0x6635116f8fee9bd7!5m3!1s2022-10-01!4m1!1i2!8m2!3d15.9496968!4d73.5059689)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/19/a6/70/f5/hotel-exterior.jpg"
+
+  utter_book_sindhudurg_three:
+  - text: "The Windmill Resorts\n🏨[Website](https://thewindmillresorts.com/)\t🗺️[Directions](https://www.google.com/maps/place/The+Windmill+Resorts/@15.9847358,73.4888555,17z/data=!3m1!4b1!4m9!3m8!1s0x3bc00358db3512a1:0xbce943e0f2f64dd!5m3!1s2022-10-01!4m1!1i2!8m2!3d15.9847347!4d73.4910403)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/1d/53/c4/52/caption.jpg"
+
+  utter_book_sindhudurg_four:
+  - text: "Avisa Nila Beach Resort\n🏨[Website](http://www.avisanila.com/)\t🗺️[Directions](https://www.google.com/maps/place/Avisa+Nila+Beach+Resort/@15.9975475,73.4876584,17z/data=!3m1!4b1!4m9!3m8!1s0x3bc002210677fa6f:0x58198ae15a95f2d6!5m3!1s2022-10-01!4m1!1i2!8m2!3d15.9975475!4d73.4898471)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/09/2c/d2/ce/avisa-nila-beach-resort.jpg"
+
+  utter_book_sindhudurg_five:
+  - text: "Kay's By The Sea\n🏨[Website](http://kaysbythesea.com/)\t🗺️[Directions](https://www.google.com/maps/place/Kay's+By+The+Sea/@15.7698591,73.6597864,17z/data=!3m1!4b1!4m9!3m8!1s0x3bbff0868f239093:0x50a97007188cc562!5m3!1s2022-10-01!4m1!1i2!8m2!3d15.7698591!4d73.6619751)"
+    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/bc/e5/66/kay-s-by-the-sea.jpg?w=1200&h=-1&s=1"
+
+  utter_book_raigad:
+  - text: "Radisson Blu Resort & Spa Alibaug\n🏨[Website](https://www.radissonhotels.com/en-us/hotels/radisson-blu-resort-alibaug-spa?cid=a:se+b:gmb+c:apac+i:local+e:rdb+d:ind+h:INMHALIRSP)\t🗺️[Directions](https://www.google.com/maps/place/Radisson+Blu+Resort+%26+Spa+-+Alibaug,+India/@18.6650763,72.8868944,17z/data=!3m1!4b1!4m9!3m8!1s0x3be87a061853fc91:0x7bcc030266fa4f3d!5m3!1s2022-10-01!4m1!1i2!8m2!3d18.6650763!4d72.8890831)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/1d/ea/23/10/hotel-aerial-shot.jpg"
+
+  utter_book_raigad_two:
+  - text: "Novotel Imagica Khopoli\n🏨[Website](https://all.accor.com/hotel/9832/index.en.shtml?utm_campaign=seo+maps&utm_medium=seo+maps&utm_source=google+Maps)\t🗺️[Directions](https://www.google.com/maps/place/Novotel+Imagica+Khopoli/@18.7702009,73.2800265,17z/data=!3m1!4b1!4m9!3m8!1s0x3be807d9c476d697:0x25b15591f68cbcdb!5m3!1s2022-10-01!4m1!1i2!8m2!3d18.7702009!4d73.2822152)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/25/00/00/9d/exterior-view.jpg"
+
+  utter_book_raigad_three:
+  - text: "Horseland Hotel And Mountain Spa\n🏨[Website](https://horselandhotel.com/)\t🗺️[Directions](https://www.google.com/maps/place/Horseland+Hotel+%26+Mountain+Spa+Matheran/@18.9866487,73.2666321,17z/data=!3m1!4b1!4m9!3m8!1s0x3be7effc06b4169b:0x28cb12285135c01d!5m3!1s2022-10-01!4m1!1i2!8m2!3d18.9866487!4d73.2688208)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/04/50/10/10/horseland-hotel-and-mountain.jpg"
+
+  utter_book_raigad_four:
+  - text: "Outpost@Alibaug\n🏨[Website](https://www.outpostalibaug.com/)\t🗺️[Directions](https://www.google.com/maps/place/Outpost@Alibaug/@18.7168827,72.8995089,17z/data=!4m9!3m8!1s0x3be7b0fd33b011c5:0xbcabbe22d19ebd51!5m3!1s2022-10-01!4m1!1i2!8m2!3d18.7169505!4d72.9016813)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/12/4c/61/f0/img-20180123-113201-largejpg.jpg"
+
+  utter_book_raigad_five:
+  - text: "Paramount Riverfront Resort & Spa\n🏨[Website](https://www.resortparamount.com/)\t🗺️[Directions](https://www.google.com/maps/place/Paramount+Riverfront+Resort+%26+Spa,+Karjat/@18.9296045,73.3382538,17z/data=!3m1!4b1!4m9!3m8!1s0x3be7fbff761fa219:0x24ff114e907add9d!5m3!1s2022-10-01!4m1!1i2!8m2!3d18.9296045!4d73.3404425)"
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/21/e1/36/ac/resort-exxterior.jpg"
+
+  utter_book_kolhapur:
+  - text: "Hotel Veeksar The Fern\n🏨[Website](https://www.fernhotels.com/the-fern-veeksar-kolhapur)\t🗺️[Directions](https://www.google.com/maps/place/Hotel+Veeksar+The+Fern/@16.7078094,74.2638713,17z/data=!3m1!4b1!4m9!3m8!1s0x3bc1011c57672bd9:0xf4edf3e662d35f6b!5m3!1s2022-10-01!4m1!1i2!8m2!3d16.7078094!4d74.26606)"
+    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/94/38/35/veeksar-the-fern-kolhapur.jpg?w=800&h=-1&s=1"
+
+  utter_book_kolhapur_two:
+  - text: "Citrus Hotel\n🏨[Website](https://www.citrushotelsindia.com/citrus-kolhapur/)\t🗺️[Directions](https://www.google.com/maps/place/Citrus+Hotel+Kolhapur/@16.7061709,74.2434196,17z/data=!3m1!4b1!4m9!3m8!1s0x3bc10043df7804f3:0xa050289df59db821!5m3!1s2022-10-01!4m1!1i2!8m2!3d16.7061709!4d74.2456083)"
+    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/fc/23/34/building-exterior.jpg?w=900&h=-1&s=1"
+
+  utter_book_kolhapur_three:
+  - text: "Hotel Three Leaves\n🏨[Website](https://www.hotel3leaves.com/)\t🗺️[Directions](https://www.google.com/maps/place/Hotel+Three+Leaves/@19.9382446,73.5312464,17z/data=!3m1!4b1!4m9!3m8!1s0x3bddf4c9a3af2225:0x2b7446530fdcf568!5m3!1s2022-10-01!4m1!1i2!8m2!3d19.9382446!4d73.5334351)"
+    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/16/0a/6c/3-leaves.jpg?w=1200&h=-1&s=1"
+
+  utter_book_kolhapur_four:
+  - text: "Nisarg Resort\n🏨[Website](https://nisargresort.in/)\t🗺️[Directions](https://www.google.com/maps/place/Nisarg+Resort/@16.7926873,74.2259835,17z/data=!3m1!4b1!4m9!3m8!1s0x3bc107686e25e039:0xe1f4a5d38bf34701!5m3!1s2022-10-01!4m1!1i2!8m2!3d16.7926873!4d74.2304682)"
+    image: "https://nisargresort.in/wp-content/uploads/2019/11/MG_3124-scaled.jpg"
+
+  utter_book_kolhapur_five:
+  - text: "Hotel Classic Midtown\n🏨[Website](http://www.hotelclassicmidtown.com/)\t🗺️[Directions](https://www.google.com/maps/place/Hotel+Classic+Mid+Town/@16.6949436,74.2167071,17z/data=!3m1!4b1!4m9!3m8!1s0x3bc1000a64f37b73:0x1caf430f3e445686!5m3!1s2022-10-01!4m1!1i2!8m2!3d16.6949436!4d74.2188958)"
+    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/95/9a/05/hotel-classic-midtown.jpg?w=1200&h=-1&s=1"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+  
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye👋"
+
+  utter_goodbye_two:
+  - text: "Before you leave,We would like to hear your thoughts 👉[Click Here!](https://forms.gle/QYYuFSZcEuinGeBv9)"
+
+  utter_iamabot:
+  - text: "I am a bot🤖, powered by Rasa."
+
+  utter_thanks:
+  - text: "I am glad to help you.\n Have a great day!"
+
+  utter_book_tickets:
+  - text:  "Book your tickets here:\n🚌[Bus](https://www.redbus.in/?gclid=Cj0KCQjwmouZBhDSARIsALYcouoSopn1JG4Qq4xbm24lun7qpDbnMl0f_RpDt6TeYmxuCjZvhJFvvMgaAt5_EALw_wcB)\n🚆[Trains](https://www.irctc.co.in/nget/train-search)\n✈️[Flights](https://www.booking.com/flights/index.en-gb.html?aid=304142&label=gen173nr-1FEgdmbGlnaHRzKIICQgVpbmRleEgJWARobIgBAZgBCbgBF8gBDNgBAegBAfgBAogCAagCA7gCiMaLmQbAAgHSAiQwODE0YmU2ZC03MWRmLTRmYjMtOTUxMS0wOTA5YjdkZGRhNWPYAgXgAgE&sid=1fad0a47a235c963629b9d652f2dde2f)%22)"
+  
+
+  
+  
+       
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+
+      
+
+   
